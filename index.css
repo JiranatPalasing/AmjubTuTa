@@ -1,0 +1,160 @@
+body {
+    margin: 20px 60px;
+    background-image:url('img/bright\ red\ background.jpg');
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    position: absolute;
+    top: 1px; /* ปรับตำแหน่งขอบบน */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999; /* ตั้งค่า z-index เพื่อให้แสดงทับบนอื่นๆ */
+    font-family: Tahoma, sans-serif;
+}
+
+.group {
+    position: fixed;
+    top: 50%;
+    left: 20px; /* ปรับตำแหน่งตามความต้องการ */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 200px; /* กำหนดความสูงของกลุ่มปุ่ม */
+    overflow-y: auto; /* ให้เกิดการเลื่อนถ้าเกินขนาด */
+    
+}
+
+
+.holder {
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 70vw;
+    border: 10px solid rgb(96, 76, 16); 
+}
+    
+img {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+button{
+    display: flex;
+    margin-bottom: 1em;
+    padding: 10px 30px;
+    
+    margin-right: auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+button1{
+    display: flex;
+    margin-bottom: 1em;
+    padding: 10px 30px;
+    
+    margin-right: auto;
+    background-color: #04AA6D;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+button:focus {
+    background-color: hwb(43 31% 13% / 0.993);
+}
+
+
+buttonfrom {
+    display: flex;
+    margin-bottom: 1em;
+    padding: 10px 30px;
+    margin-right: auto;
+    border-radius: 100px;
+    background-color: #ede15a;
+}
+
+
+
+
+/* .end {
+    align-self: end;
+    justify-self: end;
+} */
+
+.end {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 20px; 
+}
+
+.end-test{
+    border-radius: 50%;
+    padding: 30px 30px;
+}
+
+
+
+
+
+/* ส่วนของ popup */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 5px solid #e76767;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.popup.show {
+    display: block;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.overlay.show {
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px; /* ปรับขนาดกว้างของปุ่ม "x" */
+    height: 30px; /* ปรับขนาดสูงของปุ่ม "x" */
+    padding: 5px;
+    cursor: pointer;
+    font-size: 40px; /* เพิ่ม font-size สำหรับปุ่ม "x" */
+    background-color: #6e6e6e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
